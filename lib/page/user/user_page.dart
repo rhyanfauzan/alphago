@@ -80,22 +80,27 @@ class UserPage extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 14),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          'assets/icon_user.png',
-                          height: 22,
-                        ),
-                        const SizedBox(
-                          width: 13,
-                        ),
-                        const Text('Profile Saya ',
-                            style: TextStyle(
-                              color: AppColor.white,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 16,
-                            )),
-                      ],
+                    child: InkWell(
+                      onTap: () {
+                        Get.toNamed(AppRoute.profil);
+                      },
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/icon_user.png',
+                            height: 22,
+                          ),
+                          const SizedBox(
+                            width: 13,
+                          ),
+                          const Text('Profile Saya ',
+                              style: TextStyle(
+                                color: AppColor.white,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),

@@ -6,4 +6,5 @@ class AppRoute {
   static const webinardetail = '/webinardetail';
   static const artikeldetail = '/artikeldetail';
   static const beasiswadetail = '/beasiswadetail';
+  static const profil = '/profil';
 }
