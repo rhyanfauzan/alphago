@@ -1,6 +1,8 @@
 import 'package:alphago/page/beasiswa/beasiswa_page.dart';
 import 'package:alphago/page/home/webinar_detail_page.dart';
+import 'package:alphago/page/user/bookmark_page.dart';
 import 'package:alphago/page/user/profil_page.dart';
+import 'package:alphago/page/user/setting_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,6 +18,7 @@ import 'page/auth/signin_page.dart';
 import 'page/beasiswa/beasiswa_detail_page.dart';
 import 'page/home/artikel_detail_page.dart';
 import 'page/home/home_page.dart';
+import 'page/user/profil_pribadi_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -75,6 +78,9 @@ class MyApp extends StatelessWidget {
         AppRoute.artikeldetail: (context) => ArtikelDetailPage(),
         AppRoute.beasiswadetail: (context) => BeasiswaDetailPage(),
         AppRoute.profil: (context) => ProfilPage(),
+        AppRoute.profilpribadi: (context) => ProfilPribadiPage(),
+        AppRoute.setting: (context) => SettingPage(),
+        AppRoute.bookmark: (context) => BookmarkPage(),
       },
     );
   }

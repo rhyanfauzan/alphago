@@ -7,4 +7,7 @@ class AppRoute {
   static const artikeldetail = '/artikeldetail';
   static const beasiswadetail = '/beasiswadetail';
   static const profil = '/profil';
+  static const profilpribadi = '/profilpribadi';
+  static const setting = '/setting';
+  static const bookmark = '/bookmark';
 }

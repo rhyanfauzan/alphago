@@ -111,25 +111,30 @@ class UserPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       // color: AppColor.white,
                       borderRadius: BorderRadius.circular(10)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 14),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          'assets/icon_list.png',
-                          height: 22,
-                        ),
-                        const SizedBox(
-                          width: 13,
-                        ),
-                        const Text('Bookmark ',
-                            style: TextStyle(
-                              color: AppColor.grey,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 16,
-                            )),
-                      ],
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed(AppRoute.bookmark);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 14),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/icon_list.png',
+                            height: 22,
+                          ),
+                          const SizedBox(
+                            width: 13,
+                          ),
+                          const Text('Bookmark ',
+                              style: TextStyle(
+                                color: AppColor.grey,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -216,25 +221,30 @@ class UserPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       // color: AppColor.white,
                       borderRadius: BorderRadius.circular(10)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 14),
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          'assets/icon_setting.png',
-                          height: 22,
-                        ),
-                        const SizedBox(
-                          width: 13,
-                        ),
-                        const Text('Setting ',
-                            style: TextStyle(
-                              color: AppColor.grey,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 16,
-                            )),
-                      ],
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed(AppRoute.setting);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 14),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/icon_setting.png',
+                            height: 22,
+                          ),
+                          const SizedBox(
+                            width: 13,
+                          ),
+                          const Text('Setting ',
+                              style: TextStyle(
+                                color: AppColor.grey,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),

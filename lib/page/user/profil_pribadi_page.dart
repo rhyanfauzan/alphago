@@ -1,13 +1,13 @@
-import 'package:alphago/config/app_route.dart';
 import 'package:alphago/widget/custom_gender.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../config/app_color.dart';
+import '../../config/app_route.dart';
 import '../../widget/custom_textfield.dart';
 
-class ProfilPage extends StatelessWidget {
-  const ProfilPage({super.key});
+class ProfilPribadiPage extends StatelessWidget {
+  const ProfilPribadiPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,16 +37,21 @@ class ProfilPage extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
-                            color: AppColor.primary),
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(vertical: 12),
-                          child: Center(
-                            child: Text('Info Profile',
-                                style: TextStyle(
-                                  color: AppColor.white,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 15,
-                                )),
+                            color: AppColor.white),
+                        child: InkWell(
+                          onTap: () {
+                            Get.offNamed(AppRoute.profil);
+                          },
+                          child: const Padding(
+                            padding: EdgeInsets.symmetric(vertical: 12),
+                            child: Center(
+                              child: Text('Info Profile',
+                                  style: TextStyle(
+                                    color: AppColor.grey,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 15,
+                                  )),
+                            ),
                           ),
                         ),
                       ),
@@ -55,21 +60,16 @@ class ProfilPage extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
-                            color: AppColor.white),
-                        child: InkWell(
-                          onTap: () {
-                            Get.offNamed(AppRoute.profilpribadi);
-                          },
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(vertical: 12),
-                            child: Center(
-                              child: Text('Info Pribadi',
-                                  style: TextStyle(
-                                    color: AppColor.grey,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 15,
-                                  )),
-                            ),
+                            color: AppColor.primary),
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 12),
+                          child: Center(
+                            child: Text('Info Pribadi',
+                                style: TextStyle(
+                                  color: AppColor.white,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 15,
+                                )),
                           ),
                         ),
                       ),
@@ -123,13 +123,26 @@ class ProfilPage extends StatelessWidget {
                 height: 20,
               ),
               customTextfield(
-                label: 'Username',
-                hintText: 'Enter Your Username',
+                label: 'User ID',
+                hintText: 'Masukan ID',
               ),
               customTextfield(
-                label: 'Bio ',
-                hintText: 'Enter Your Bio',
+                label: 'Email',
+                hintText: 'Enter Your Email Address',
               ),
+              customTextfield(
+                label: 'Address',
+                hintText: 'Enter Your Address',
+              ),
+              customTextfield(
+                label: 'Phone Number',
+                hintText: 'Enter Your Phone Number',
+              ),
+              customTextfield(
+                label: 'Date of Birth',
+                hintText: 'dd/mm/yy',
+              ),
+              customGender(label: 'Gender', hintText: 'Male'),
               const SizedBox(
                 height: 20,
               )
