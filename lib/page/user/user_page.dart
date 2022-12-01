@@ -145,17 +145,17 @@ class UserPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       // color: AppColor.white,
                       borderRadius: BorderRadius.circular(10)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 14),
-                    child: InkWell(
-                      onTap: () {
-                        showModalBottomSheet(
-                            context: context,
-                            builder: (context) {
-                              return showCustomerService();
-                            });
-                      },
+                  child: InkWell(
+                    onTap: () {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (context) {
+                            return showCustomerService();
+                          });
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 14),
                       child: Row(
                         children: [
                           Image.asset(
@@ -183,17 +183,17 @@ class UserPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       // color: AppColor.white,
                       borderRadius: BorderRadius.circular(10)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 14),
-                    child: InkWell(
-                      onTap: () {
-                        showModalBottomSheet(
-                            context: context,
-                            builder: (context) {
-                              return showTentangkami();
-                            });
-                      },
+                  child: InkWell(
+                    onTap: () {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (context) {
+                            return showTentangkami();
+                          });
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 14),
                       child: Row(
                         children: [
                           Image.asset(

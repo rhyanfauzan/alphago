@@ -325,8 +325,8 @@ class _RegisterPageState extends State<RegisterPage> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
-                                    children: [
-                                      const Padding(
+                                    children: const [
+                                      Padding(
                                         padding: EdgeInsets.symmetric(
                                             horizontal: 20, vertical: 16),
                                         child: Text(

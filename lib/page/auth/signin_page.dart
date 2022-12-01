@@ -118,7 +118,7 @@ class SigninPage extends StatelessWidget {
                                 fillColor: Colors.white,
                                 filled: true,
                                 border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(8),
+                                  borderRadius: BorderRadius.circular(25),
                                   // borderSide: BorderSide.,
                                 ),
                                 labelStyle:
@@ -154,7 +154,7 @@ class SigninPage extends StatelessWidget {
                                 fillColor: Colors.white,
                                 filled: true,
                                 border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(8),
+                                  borderRadius: BorderRadius.circular(25),
                                   // borderSide: BorderSide.none,
                                 ),
                                 labelStyle:
@@ -192,15 +192,15 @@ class SigninPage extends StatelessWidget {
                             const SizedBox(height: 50),
                             Material(
                               color: AppColor.primary,
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.circular(25),
                               child: InkWell(
                                 onTap: () => login(context),
-                                borderRadius: BorderRadius.circular(8),
+                                borderRadius: BorderRadius.circular(25),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const Padding(
+                                  children: const [
+                                    Padding(
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 20, vertical: 16),
                                       child: Text(
@@ -215,44 +215,77 @@ class SigninPage extends StatelessWidget {
                                 ),
                               ),
                             ),
+                            const SizedBox(
+                              height: 16,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Text(
+                                  'Don’t have an account? ',
+                                  style: TextStyle(
+                                      fontSize: 14, color: Colors.grey),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (_) => const RegisterPage(),
+                                      ),
+                                    );
+                                  },
+                                  child: const Text(
+                                    'Register ',
+                                    style: TextStyle(
+                                      color: AppColor.primary,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
                     ),
                     const SizedBox(
-                      height: 30,
+                      height: 20,
+                    ),
+                    const Text('Atau'),
+                    const SizedBox(
+                      height: 20,
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Don’t have an account? ',
-                            style: TextStyle(fontSize: 14, color: Colors.grey),
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (_) => const RegisterPage(),
-                                ),
-                              );
-                            },
-                            child: const Text(
-                              'Register ',
-                              style: TextStyle(
-                                color: AppColor.primary,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14,
-                              ),
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/icon_fb.png',
+                              width: 30,
+                              height: 30,
                             ),
-                          ),
-                        ],
-                      ),
-                    ),
+                            const SizedBox(
+                              width: 37,
+                            ),
+                            Image.asset(
+                              'assets/icon_google.png',
+                              width: 30,
+                              height: 30,
+                            ),
+                            const SizedBox(
+                              width: 37,
+                            ),
+                            Image.asset(
+                              'assets/icon_apple.png',
+                              width: 30,
+                              height: 30,
+                            )
+                          ],
+                        )),
                     const SizedBox(
-                      height: 30,
+                      height: 130,
                     ),
                   ],
                 ),
@@ -262,109 +295,5 @@ class SigninPage extends StatelessWidget {
         },
       ),
     );
-    // return Scaffold(
-    //   body: SafeArea(
-    //     child: LayoutBuilder(builder: (context, constraints) {
-    //       return SingleChildScrollView(
-    //         child: ConstrainedBox(
-    //           constraints: BoxConstraints(
-    //             minHeight: constraints.maxHeight,
-    //           ),
-    //           child: Form(
-    //             key: formKey,
-    //             child: Padding(
-    //               padding: const EdgeInsets.all(16),
-    //               child: Column(
-    //                 mainAxisAlignment: MainAxisAlignment.center,
-    //                 children: [
-    //                   Image.asset(
-    //                     AppAsset.logo,
-    //                     width: 180,
-    //                     fit: BoxFit.fitWidth,
-    //                   ),
-    //                   const SizedBox(height: 80),
-    //                   Align(
-    //                     alignment: Alignment.centerLeft,
-    //                     child: Text(
-    //                       'Sign In\nTo Your Account',
-    //                       style:
-    //                           Theme.of(context).textTheme.titleLarge!.copyWith(
-    //                                 fontWeight: FontWeight.bold,
-    //                               ),
-    //                     ),
-    //                   ),
-    //                   const SizedBox(height: 20),
-    //                   TextFormField(
-    //                     controller: controllerEmail,
-    //                     validator: (value) =>
-    //                         value == '' ? "Don't empty" : null,
-    //                     decoration: InputDecoration(
-    //                       isDense: true,
-    //                       filled: true,
-    //                       fillColor: Colors.white,
-    //                       contentPadding: const EdgeInsets.symmetric(
-    //                           horizontal: 16, vertical: 16),
-    //                       hintText: 'Email Address',
-    //                       border: OutlineInputBorder(
-    //                         borderRadius: BorderRadius.circular(30),
-    //                       ),
-    //                       focusedBorder: OutlineInputBorder(
-    //                         borderRadius: BorderRadius.circular(30),
-    //                         borderSide:
-    //                             const BorderSide(color: AppColor.secondary),
-    //                       ),
-    //                       enabledBorder: OutlineInputBorder(
-    //                         borderRadius: BorderRadius.circular(30),
-    //                         borderSide: BorderSide.none,
-    //                       ),
-    //                     ),
-    //                   ),
-    //                   const SizedBox(height: 20),
-    //                   TextFormField(
-    //                     controller: controllerPassword,
-    //                     obscureText: true,
-    //                     validator: (value) =>
-    //                         value == '' ? "Don't empty" : null,
-    //                     decoration: InputDecoration(
-    //                       isDense: true,
-    //                       filled: true,
-    //                       fillColor: Colors.white,
-    //                       contentPadding: const EdgeInsets.symmetric(
-    //                           horizontal: 16, vertical: 16),
-    //                       hintText: 'Password',
-    //                       border: OutlineInputBorder(
-    //                         borderRadius: BorderRadius.circular(30),
-    //                       ),
-    //                       focusedBorder: OutlineInputBorder(
-    //                         borderRadius: BorderRadius.circular(30),
-    //                         borderSide:
-    //                             const BorderSide(color: AppColor.secondary),
-    //                       ),
-    //                       enabledBorder: OutlineInputBorder(
-    //                         borderRadius: BorderRadius.circular(30),
-    //                         borderSide: BorderSide.none,
-    //                       ),
-    //                     ),
-    //                   ),
-    //                   const SizedBox(height: 30),
-    //                   ButtonCustom(
-    //                     label: 'Sign In',
-    //                     isExpand: true,
-    //                     onTap: () => login(context),
-    //                   ),
-    //                   const SizedBox(height: 24),
-    //                   const Text(
-    //                     'Create new Account',
-    //                     style: TextStyle(color: Colors.grey),
-    //                   ),
-    //                 ],
-    //               ),
-    //             ),
-    //           ),
-    //         ),
-    //       );
-    //     }),
-    //   ),
-    // );
   }
 }
