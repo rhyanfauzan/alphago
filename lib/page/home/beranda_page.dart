@@ -74,14 +74,7 @@ class BerandaPage extends StatelessWidget {
                                 ),
                                 iconSize: 100,
                                 onPressed: () {
-                                  // Navigator.of(context).push(
-                                  //   MaterialPageRoute(
-                                  //     builder: (context) =>
-                                  //         TabungSampahPage(
-                                  //       idUser: id_user,
-                                  //     ),
-                                  //   ),
-                                  // );
+                                  Get.toNamed(AppRoute.kompetisi);
                                 },
                               ),
                             ],
@@ -109,14 +102,7 @@ class BerandaPage extends StatelessWidget {
                                 icon: Image.asset('assets/ic_magang.png'),
                                 iconSize: 100,
                                 onPressed: () {
-                                  // Navigator.of(context).push(
-                                  //   MaterialPageRoute(
-                                  //     builder: (context) =>
-                                  //         TabungSampahPage(
-                                  //       idUser: id_user,
-                                  //     ),
-                                  //   ),
-                                  // );
+                                  Get.toNamed(AppRoute.magang);
                                 },
                               ),
                             ],
@@ -128,14 +114,7 @@ class BerandaPage extends StatelessWidget {
                                 icon: Image.asset('assets/ic_events.png'),
                                 iconSize: 100,
                                 onPressed: () {
-                                  // Navigator.of(context).push(
-                                  //   MaterialPageRoute(
-                                  //     builder: (context) => TukarPoinPage(
-                                  //       idUser: id_user,
-                                  //       currentPoin: current_poin,
-                                  //     ),
-                                  //   ),
-                                  // );
+                                  Get.toNamed(AppRoute.events);
                                 },
                               ),
                             ],

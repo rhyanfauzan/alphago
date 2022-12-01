@@ -1,5 +1,5 @@
 import 'package:alphago/config/app_route.dart';
-import 'package:alphago/page/home/webinar_detail_page.dart';
+import 'package:alphago/page/webinar/webinar_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:alphago/config/app_color.dart';
 import 'package:get/get.dart';

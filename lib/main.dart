@@ -1,5 +1,8 @@
 import 'package:alphago/page/beasiswa/beasiswa_page.dart';
-import 'package:alphago/page/home/webinar_detail_page.dart';
+import 'package:alphago/page/events/events_page.dart';
+import 'package:alphago/page/kompetisi/kompetisi_page.dart';
+import 'package:alphago/page/magang/magang_page.dart';
+import 'package:alphago/page/webinar/webinar_detail_page.dart';
 import 'package:alphago/page/user/bookmark_page.dart';
 import 'package:alphago/page/user/profil_page.dart';
 import 'package:alphago/page/user/setting_page.dart';
@@ -16,7 +19,7 @@ import 'firebase_options.dart';
 import 'model/user.dart';
 import 'page/auth/signin_page.dart';
 import 'page/beasiswa/beasiswa_detail_page.dart';
-import 'page/home/artikel_detail_page.dart';
+import 'page/artikel/artikel_detail_page.dart';
 import 'page/home/home_page.dart';
 import 'page/user/profil_pribadi_page.dart';
 
@@ -74,6 +77,11 @@ class MyApp extends StatelessWidget {
         AppRoute.home: (context) => HomePage(),
         AppRoute.signin: (context) => SigninPage(),
         AppRoute.beasiswa: (context) => const BeasiswaPage(),
+        AppRoute.kompetisi: (context) => const KompetisiPage(),
+        AppRoute.events: (context) => const EventsPage(),
+        AppRoute.magang: (context) => const MagangPage(),
+        AppRoute.artikel: (context) => const BeasiswaPage(),
+        AppRoute.webinar: (context) => const BeasiswaPage(),
         AppRoute.webinardetail: (context) => WebinarDetailPage(),
         AppRoute.artikeldetail: (context) => ArtikelDetailPage(),
         AppRoute.beasiswadetail: (context) => BeasiswaDetailPage(),

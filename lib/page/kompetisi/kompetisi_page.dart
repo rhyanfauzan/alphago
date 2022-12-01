@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../../widget/item_card.dart';
 
-class BeasiswaPage extends StatelessWidget {
-  const BeasiswaPage({super.key});
+class KompetisiPage extends StatelessWidget {
+  const KompetisiPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class BeasiswaPage extends StatelessWidget {
                         padding:
                             EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                         child: Text(
-                          'Beasiswa',
+                          'Kompetisi',
                           style: TextStyle(color: AppColor.white, fontSize: 12),
                         ),
                       ),
@@ -42,7 +42,7 @@ class BeasiswaPage extends StatelessWidget {
                         padding:
                             EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                         child: Text(
-                          'Kompetisi',
+                          'Beasiswa',
                           style: TextStyle(color: AppColor.white, fontSize: 12),
                         ),
                       ),
@@ -84,7 +84,7 @@ class BeasiswaPage extends StatelessWidget {
                 ),
                 for (int i = 0; i < 10; i++)
                   itemCard(
-                    titleCard: 'Beasiswa Mahaghora',
+                    titleCard: 'Kompetisi',
                     imageCard: 'assets/beasiswa1.png',
                   ),
                 const SizedBox(
